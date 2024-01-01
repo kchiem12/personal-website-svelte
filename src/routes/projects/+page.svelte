@@ -3,7 +3,18 @@
 </script>
 
 <div>
-  <h1>Hello world!</h1>
+  <h1>Featured Projects</h1>
 </div>
 
-<Projects />
+<div class="projects">
+  <Projects />
+</div>
+
+<style>
+  .projects {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>

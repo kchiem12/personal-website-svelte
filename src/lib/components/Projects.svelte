@@ -6,12 +6,42 @@
   export let year = "Philly native";
 </script>
 
-<div>
-  <h3>Sidequest</h3>
-  <p>2022</p>
+<div class="projects-container">
+  <div class="header">
+    <div class="left-header">
+      <h3>Sidequest</h3>
+      <p class="year">2023</p>
+    </div>
+    <div class="right-header">[insert tech stack]</div>
+  </div>
   <p>
     mobile app to allow students to find/post jobs. by the students, for the
     students
   </p>
-  <p>Swift</p>
 </div>
+
+<style>
+  .projects-container {
+    font-family: "Raleway", sans-serif;
+    width: 50%;
+    border: 1px solid rgb(180, 180, 180);
+    padding: 1rem;
+    border-radius: 10px;
+    padding-top: 0.25rem;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+  }
+
+  .left-header h3 {
+    margin-bottom: 0;
+  }
+
+  .left-header p {
+    margin-top: 0.2rem;
+  }
+</style>
