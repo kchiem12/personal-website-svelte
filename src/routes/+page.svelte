@@ -1,13 +1,10 @@
 <div class="container">
   <h1 class="name">Kenneth Chiem</h1>
 
-  <p class="introduction">Welcome! A few things about me:</p>
-  <ul>
+  <ul class="info">
+    <li>Interested in machine learning and full-stack/mobile development</li>
     <li>CS student at Cornell University</li>
-    <li>
-      Interests lie in machine learning, full-stack development, and mobile
-      development
-    </li>
+    <li>Prev. @ nSpire.ai</li>
     <li>Philly native</li>
     <li>
       <a href="">email</a> and
@@ -18,7 +15,7 @@
 
 <style>
   .container {
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,6 +30,21 @@
 
   .introduction {
     font-size: 1.5rem;
-    margin-top: 0;
+    margin-top: 2rem;
+  }
+
+  .info {
+    font-size: 1.25rem;
+    /* text-align: center; */
+    /* margin-top: 2rem; */
+    list-style: none;
+    /* padding: 0; */
+    padding-left: 3rem;
+    margin: 0;
+    margin-top: 3rem;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 2rem;
   }
 </style>

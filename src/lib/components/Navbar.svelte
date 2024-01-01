@@ -6,10 +6,10 @@
 </div>
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&family=Quicksand&family=Raleway&display=swap");
 
   .navbar-container {
-    font-family: "Inter", sans-serif;
+    font-family: "Raleway", sans-serif;
     display: flex;
     justify-content: end;
     align-items: center;
