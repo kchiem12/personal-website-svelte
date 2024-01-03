@@ -20,6 +20,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 1rem;
+    gap: 5rem;
   }
 </style>

@@ -23,7 +23,7 @@
   <div class="header">
     <div class="left-header">
       <h3>{name}</h3>
-      <p class="year">{year}</p>
+      <!-- <p class="year">{year}</p> -->
     </div>
     <div class="right-header">
       <p class="description">
@@ -63,6 +63,8 @@
     cursor: pointer;
     background-color: transparent;
     color: aliceblue;
+    border-right: none;
+    border-left: none;
   }
 
   .img-container {
