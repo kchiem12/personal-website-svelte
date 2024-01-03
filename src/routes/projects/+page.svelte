@@ -1,5 +1,6 @@
 <script>
   import Projects from "$lib/components/Projects.svelte";
+  import { projects } from "$lib/data/projects";
 </script>
 
 <div>
@@ -7,7 +8,9 @@
 </div>
 
 <div class="projects">
-  <Projects />
+  {#each projects as project}
+    <Projects {...project} />
+  {/each}
 </div>
 
 <style>
@@ -16,5 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 1rem;
   }
 </style>

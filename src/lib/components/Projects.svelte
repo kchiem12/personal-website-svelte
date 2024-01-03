@@ -1,30 +1,38 @@
 <script lang="ts">
-  export let name: string = "Kenneth Chiem";
-  export let summary: string =
-    "Interested in machine learning and full-stack/mobile development";
-  export let stack = "CS student at Cornell University";
-  export let year: int = "Philly native";
-  export let open: boolean = false;
+  import type { Image } from "$lib/Image";
   import { slide } from "svelte/transition";
+
+  export let name: string;
+  export let description: string;
+  export let stack: Image[];
+  export let year: number;
+  export let github: string;
+  export let images: Image[];
+  export let open: boolean = false;
 
   const handleClick = () => {
     open = !open;
   };
+
+  const stopPropagation = (event: Event) => {
+    event.stopPropagation();
+  };
 </script>
 
-<div class="projects-container" on:click={handleClick}>
+<button class="projects-container" on:click={handleClick}>
   <div class="header">
     <div class="left-header">
-      <h3>Sidequest</h3>
-      <p class="year">2023</p>
+      <h3>{name}</h3>
+      <p class="year">{year}</p>
     </div>
     <div class="right-header">
       <p class="description">
-        mobile app to allow students to find/post jobs. <br />by the students,
-        for the students.
+        {description}
       </p>
       <div class="tech-stack">
-        <img class="tech-stack-img" src="swift.png" alt="swift" />
+        {#each stack as tech}
+          <img class="tech-stack-img" src={tech.src} alt={tech.alt} />
+        {/each}
       </div>
     </div>
   </div>
@@ -32,21 +40,17 @@
   {#if open}
     <div class="bottom-header" transition:slide>
       <div class="img-container">
-        <img
-          src="sidequest_profile_screen-min.png"
-          alt="sidequest-profile-screen"
-        />
+        {#each images as image}
+          <img src={image.src} alt={image.alt} />
+        {/each}
       </div>
-      <button class="github"
-        >Source <img
-          class="tech-stack-img"
-          src="github.png"
-          alt="github-icon"
-        /></button
+      <a class="github" href={github} on:click={stopPropagation}>
+        Source
+        <img class="tech-stack-img" src="github.png" alt="github-icon" /></a
       >
     </div>
   {/if}
-</div>
+</button>
 
 <style>
   .projects-container {
@@ -57,14 +61,18 @@
     border-radius: 10px;
     padding-top: 0.25rem;
     cursor: pointer;
+    background-color: transparent;
+    color: aliceblue;
   }
 
   .img-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    gap: 2rem;
   }
 
   .img-container img {
@@ -77,18 +85,25 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
-    gap: 5rem;
+    /* gap: 5rem; */
   }
 
   .left-header h3 {
     margin-top: 1rem;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    width: 100%;
   }
 
   .left-header p {
     margin-top: 0;
     margin-bottom: 0;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .right-header {
+    width: 60%;
   }
 
   .github {
@@ -97,6 +112,7 @@
     align-items: end;
     background-color: transparent;
     border: none;
+    text-decoration: none;
     color: aliceblue;
     font-family: "Raleway", sans-serif;
     padding-left: 0;
@@ -104,12 +120,14 @@
     margin-top: 0;
     gap: 0.5rem;
     cursor: pointer;
-    z-index: 1;
   }
 
   .description {
-    margin-top: 1.2rem;
+    margin-top: 1.3rem;
     margin-bottom: 0.5rem;
+    text-align: right;
+    font-size: 1rem;
+    /* margin-left: 5rem; */
   }
 
   .bottom-header {
