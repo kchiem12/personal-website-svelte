@@ -4,6 +4,11 @@
 
 <Navbar />
 
+<svelte:head>
+  <link rel="icon" type="image/svg" href="favicon-32x32.png" />
+  <title>Kenneth Chiem</title>
+</svelte:head>
+
 <slot />
 
 <style>

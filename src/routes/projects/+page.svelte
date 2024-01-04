@@ -17,6 +17,10 @@
   <p>This website was made using SvelteKit</p>
 </div>
 
+<svelte:head>
+  <meta name="description" content="Ken's portfolio" />
+</svelte:head>
+
 <style>
   .title {
     width: 100%;

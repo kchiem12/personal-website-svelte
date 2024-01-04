@@ -13,6 +13,10 @@
   </ul>
 </div>
 
+<svelte:head>
+  <meta name="description" content="Ken's personal website" />
+</svelte:head>
+
 <style>
   .container {
     font-family: "Raleway", sans-serif;
