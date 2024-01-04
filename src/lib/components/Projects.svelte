@@ -82,7 +82,8 @@
     width: 100%;
   }
 
-  .img-example {
+  .img-example,
+  .vertical {
     /* width: 100%; */
     height: 400px;
     border-radius: 10px;

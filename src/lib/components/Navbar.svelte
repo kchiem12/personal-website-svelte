@@ -1,7 +1,16 @@
+<script>
+  import { page } from "$app/stores";
+
+  $: currPage = $page.url.pathname;
+</script>
+
 <div class="navbar-container">
   <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/projects">Portfolio</a></li>
+    <li><a class:selected={currPage === "/"} href="/">Home</a></li>
+    <li>
+      <a class:selected={currPage === "/projects"} href="/projects">Portfolio</a
+      >
+    </li>
   </ul>
 </div>
 
@@ -33,6 +42,10 @@
 
   a {
     text-decoration: none;
+    color: rgb(133, 133, 133);
+  }
+
+  .selected {
     color: var(--color-text);
   }
 
