@@ -35,4 +35,18 @@
     text-decoration: none;
     color: var(--color-text);
   }
+
+  @media (max-width: 768px) {
+    .navbar-container {
+      padding-right: 0;
+    }
+
+    ul {
+      gap: 1rem;
+    }
+
+    li {
+      font-size: 1rem;
+    }
+  }
 </style>

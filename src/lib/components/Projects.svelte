@@ -41,7 +41,11 @@
     <div class="bottom-header" transition:slide>
       <div class="img-container">
         {#each images as image}
-          <img src={image.src} alt={image.alt} />
+          <img
+            class={image.vertical ? "vertical" : "img-example"}
+            src={image.src}
+            alt={image.alt}
+          />
         {/each}
       </div>
       <a class="github" href={github} on:click={stopPropagation}>
@@ -75,12 +79,19 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
     gap: 2rem;
+    width: 100%;
   }
 
-  .img-container img {
+  .img-example {
     /* width: 100%; */
     height: 400px;
     border-radius: 10px;
+
+    /* crop the img in case it is wider than the parent container */
+    object-fit: cover;
+
+    /* avoid blurry img */
+    image-rendering: -webkit-optimize-contrast;
   }
 
   .header {
@@ -109,9 +120,9 @@
   }
 
   .github {
-    display: flex;
-    justify-content: center;
-    align-items: end;
+    display: inline-block;
+    /* justify-content: center; */
+    /* align-items: end; */
     background-color: transparent;
     border: none;
     text-decoration: none;
@@ -120,7 +131,9 @@
     padding-left: 0;
     font-size: 1rem;
     margin-top: 0;
+    /* text-align: center; */
     gap: 0.5rem;
+    /* width: auto; */
     cursor: pointer;
   }
 
@@ -133,9 +146,10 @@
   }
 
   .bottom-header {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
+    text-align: center;
     margin-bottom: 2rem;
   }
 
@@ -148,5 +162,57 @@
     display: flex;
     justify-content: end;
     gap: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .projects-container {
+      width: 100%;
+    }
+
+    .header {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .left-header h3 {
+      font-size: 2rem;
+    }
+
+    .right-header {
+      width: 100%;
+    }
+
+    .description {
+      text-align: center;
+    }
+
+    .tech-stack {
+      justify-content: center;
+    }
+
+    .tech-stack-img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .bottom-header {
+      margin-bottom: 0;
+    }
+
+    .img-container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .img-example {
+      width: 100%;
+      height: auto;
+      /* object-fit: cover; */
+    }
+
+    .vertical {
+      height: 500px;
+    }
   }
 </style>

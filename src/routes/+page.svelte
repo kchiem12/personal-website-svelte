@@ -7,7 +7,7 @@
     <li>Prev. @ nSpire.ai</li>
     <li>Philly native</li>
     <li>
-      <a href="">email</a> and
+      <a href="mailto:kc696@cornell.edu">email</a> and
       <a href="https://www.linkedin.com/in/kenneth-chiem/">linkedin</a>
     </li>
   </ul>
@@ -28,11 +28,6 @@
     margin-bottom: 0;
   }
 
-  .introduction {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-  }
-
   .info {
     font-size: 1.25rem;
     /* text-align: center; */
@@ -46,5 +41,21 @@
 
   li:not(:last-child) {
     margin-bottom: 2rem;
+  }
+
+  a {
+    color: #8eff6b;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .name {
+      font-size: 2.5rem;
+    }
+
+    .info {
+      font-size: 1rem;
+      /* padding-left: 0; */
+    }
   }
 </style>

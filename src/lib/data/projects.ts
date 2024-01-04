@@ -6,18 +6,21 @@ export const projects: Project[] = [
     description: "Mobile app for students to post/find jobs",
     stack: [{
       src: "swift.png",
-      alt: "swift-icon"
+      alt: "swift-icon",
+      vertical: false
     }],
     year: 2023,
     github: "https://github.com/kchiem12/sidequest-frontend",
     images: [
       {
         src: "sidequest_profile_screen-min.png",
-        alt: "sidequest-profile-screen"
+        alt: "sidequest-profile-screen",
+        vertical: true
       },
       {
         src: "sidequest-login.png",
-        alt: "sidequest-login-screen"
+        alt: "sidequest-login-screen",
+        vertical: true
       }
     ]
   },
@@ -26,22 +29,26 @@ export const projects: Project[] = [
     description: "Analyze basketball videos with CV to track stats",
     stack: [{
       src: "python.png",
-      alt: "python-icon"
+      alt: "python-icon",
+      vertical: false
     },
     {
       src: "aws.png",
-      alt: "aws-icon"
+      alt: "aws-icon",
+      vertical: false
     },
     {
       src: "docker.png",
-      alt: "docker-icon"
+      alt: "docker-icon",
+      vertical: false
     }],
     year: 2023,
     github: "https://github.com/CornellDataScience/Ball-101",
     images: [
       {
         src: "hooptracker.png",
-        alt: "hooptracker-screen"
+        alt: "hooptracker-screen",
+        vertical: false
       }
     ]
   },
@@ -51,7 +58,8 @@ export const projects: Project[] = [
     stack: [
       {
         src: "react.png",
-        alt: "react-icon"
+        alt: "react-icon",
+        vertical: false
       }
     ],
     year: 2023,
@@ -59,11 +67,13 @@ export const projects: Project[] = [
     images: [
       {
         src: "trivai-home.png",
-        alt: "trivai-home-screen"
+        alt: "trivai-home-screen",
+        vertical: true
       },
       {
         src: "trivai-questions.png",
-        alt: "trivai-questions-screen"
+        alt: "trivai-questions-screen",
+        vertical: true
       }
     ]
   },
@@ -73,7 +83,8 @@ export const projects: Project[] = [
     stack: [
       {
         src: "ocaml.png",
-        alt: "ocaml-icon"
+        alt: "ocaml-icon",
+        vertical: false
       }
     ],
     year: 2023,
@@ -81,7 +92,8 @@ export const projects: Project[] = [
     images: [
       {
         src: "bocaml.jpg",
-        alt: "bocaml-screen"
+        alt: "bocaml-screen",
+        vertical: true
       }
     ]
   },
@@ -91,19 +103,23 @@ export const projects: Project[] = [
     stack: [
       {
         src: "react.png",
-        alt: "react-icon"
+        alt: "react-icon",
+        vertical: false
       },
       {
         src: "mongodb.png",
-        alt: "mongodb-icon"
+        alt: "mongodb-icon",
+        vertical: false
       },
       {
         src: "nodejs.png",
-        alt: "nodejs-icon"
+        alt: "nodejs-icon",
+        vertical: false
       },
       {
         src: "redux.png",
-        alt: "redux-icon"
+        alt: "redux-icon",
+        vertical: false
       }
     ],
     year: 2022,
@@ -111,7 +127,8 @@ export const projects: Project[] = [
     images: [
       {
         src: "routinely.png",
-        alt: "routinely-screen"
+        alt: "routinely-screen",
+        vertical: false
       }
     ]
   },
@@ -121,7 +138,8 @@ export const projects: Project[] = [
     stack: [
       {
         src: "svelte.png",
-        alt: "svelte-icon"
+        alt: "svelte-icon",
+        vertical: false
       }
     ],
     year: 2023,
@@ -129,7 +147,8 @@ export const projects: Project[] = [
     images: [
       {
         src: "vwcnails.png",
-        alt: "vwcnails-screen"
+        alt: "vwcnails-screen",
+        vertical: false
       }
     ]
   }
